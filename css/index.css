@@ -4,18 +4,28 @@
 
 nav{
     display:flex;
-    justify-content:space-between;
+    justify-content:space-around;
     max-width:90%;
     margin:0 auto;
 }
 
-.nav-items{
-    display:flex;
+.head{
+    max-width:90%;
+    position:relative;
+    margin-top:-200px;
 }
 
 .intro-section{
+    max-width:95%;
+    margin:0 auto;
     display:flex;
 }
+
+.nav-item{
+    display:inline-block;
+    margin-left:10px;
+}
+
 
 .left-section{
     display:flex;
@@ -29,15 +39,22 @@ nav{
     margin:0 auto;
 }
 
+.display{
+    display:flex;
+}
+
 .discount{
     position:relative;
-    top:-240px;
+    z-index:1;
+    top:400px;
     right:20px;
+    max-width:60%;
 }
 
 .discount-content{
     position:relative;
-    top:-390px;
+    z-index:1;
+    top:250px;
     left:35px;
 }
 .action-btn{
@@ -70,7 +87,7 @@ p{
 
 .btn{
     position:relative;
-    top:360px;
+    top:405px;
 }
 
 .action-btn{
@@ -81,4 +98,61 @@ p{
     margin-left:15px;
     color:#ffffff;
     font-size:20px;
+}
+
+.action-btns{
+    background-color:#e85b30;
+    padding:20px;
+    border-radius:40px;
+    border:2px solid #e85b30;
+    margin-left:15px;
+    color:#ffffff;
+    font-size:20px;
+}
+
+.btns{
+    position:relative;
+    margin-top:220px;
+}
+
+
+@media screen and (max-width:976px){
+    .discount{
+        position:relative;
+        top:300px;
+    }
+    .discount-content{
+        top:160px;
+    }
+    .head{
+        margin-top:-240px;
+    }
+}
+
+@media screen and (max-width:726px){
+    .discount{
+        top:240px;
+        max-width:60%;
+    }
+    .discount-content{
+        top:100px;
+        right:20px;
+    }
+
+}
+
+
+@media screen and (max-width:600px){
+ .intro-section{
+    flex-direction:column;
+ }
+ .right-section{
+    max-width:90%;
+    margin:0 auto;
+    order:-1;
+ }
+ .left-section{
+    max-width:90%;
+    margin:0 auto;
+ }   
 }
